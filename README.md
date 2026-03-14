@@ -13,25 +13,25 @@ Este proyecto consiste en una estación meteorológica casera capaz de medir var
 ## 📸 Galería
 
 ### Protoboard — vista frontal
-![Protoboard frente](imagenes/ProtoBoard_01_-_Frente_-_Proyecto_Meteorologia.jpg)
+![Protoboard frente](https://raw.githubusercontent.com/alecmmobile/estacion_meteorologica/main/imagenes/ProtoBoard%2001%20-%20Frente%20-%20Proyecto%20Meteorologia.jpg)
 
 ### Protoboard — vista trasera
-![Protoboard atrás](imagenes/ProtoBoard_01_-_Atras_-_Proyecto_Meteorologia.jpg)
+![Protoboard atrás](https://raw.githubusercontent.com/alecmmobile/estacion_meteorologica/main/imagenes/ProtoBoard%2001%20-%20Atras%20-%20Proyecto%20Meteorologia.jpg)
 
 ### Pantalla — BME680 (Presión, Temperatura, Humedad, Gas)
-![BME680](imagenes/BME680_-_Proyecto_Meteorologia.jpg)
+![BME680](https://raw.githubusercontent.com/alecmmobile/estacion_meteorologica/main/imagenes/BME680%20-%20Proyecto%20Meteorologia.jpg)
 
 ### Pantalla — MQ-2 (Gas combustible y humo)
-![MQ-2](imagenes/MQ2_-_Proyecto_Meteorologia.jpg)
+![MQ-2](https://raw.githubusercontent.com/alecmmobile/estacion_meteorologica/main/imagenes/MQ2%20-%20Proyecto%20Meteorologia.jpg)
 
 ### Pantalla — GY-30 (Luminosidad en lux)
-![GY-30 pantalla](imagenes/GY-30_-_Proyecto_Meteorologia_02.jpg)
+![GY-30 pantalla](https://raw.githubusercontent.com/alecmmobile/estacion_meteorologica/main/imagenes/GY-30%20-%20Proyecto%20Meteorologia%2002.jpg)
 
 ### Protoboard con GY-30 conectado
-![GY-30 protoboard](imagenes/GY-30_-_Proyecto_Meteorologia.jpg)
+![GY-30 protoboard](https://raw.githubusercontent.com/alecmmobile/estacion_meteorologica/main/imagenes/GY-30%20-%20Proyecto%20Meteorologia.jpg)
 
 ### Pantalla — Servidor HTTP (IP, red, endpoints)
-![Servidor Web](imagenes/Servidor_Web_-_Proyecto_Meteorologia.jpg)
+![Servidor Web](https://raw.githubusercontent.com/alecmmobile/estacion_meteorologica/main/imagenes/Servidor%20Web%20-%20Proyecto%20Meteorologia.jpg)
 
 ---
 
@@ -91,6 +91,25 @@ Este proyecto consiste en una estación meteorológica casera capaz de medir var
 
 ---
 
+## 💻 Código fuente
+
+El código fuente del proyecto fue desarrollado en **Arduino IDE** y se encuentra en este mismo repositorio en la siguiente ubicación:
+
+📄 [`_Proyecto_Meteorologia/_Proyecto_Meteorologia.ino`](https://github.com/alecmmobile/estacion_meteorologica/blob/main/_Proyecto_Meteorologia/_Proyecto_Meteorologia.ino)
+
+### ⚠️ Configuración obligatoria antes de compilar
+
+Antes de subir el código al ESP32, debes editar las siguientes líneas con el nombre y contraseña de tu red WiFi:
+
+```cpp
+const char* WIFI_SSID     = "TU_RED_WIFI";        // ← tu red WiFi
+const char* WIFI_PASSWORD = "TU_CONTRASENA";      // ← tu contraseña
+```
+
+Estas líneas se encuentran al inicio del archivo `.ino`, en la sección `① CONFIGURACIÓN DE RED`.
+
+---
+
 ## 📦 Librerías utilizadas
 
 ### Librerías incluidas en el código fuente
@@ -139,8 +158,9 @@ La IP local y el nombre de la red se muestran en la pantalla al iniciar.
 2. Seleccionar la placa: **TTGO T-Display**
 3. Configurar la librería `TFT_eSPI` con el archivo `User_Setup.h` correspondiente al LilyGo T-Display
 4. Instalar todas las librerías listadas arriba
-5. Conectar el hardware según el diagrama de conexiones
-6. Compilar y subir el código
+5. Editar `WIFI_SSID` y `WIFI_PASSWORD` con tus credenciales
+6. Conectar el hardware según el diagrama de conexiones
+7. Compilar y subir el código
 
 ---
 
@@ -167,17 +187,18 @@ Puedes ver la explicación completa del proyecto en YouTube:
 ## 📁 Estructura del repositorio
 
 ```
-📦 estacion-meteorologica
- ┣ 📂 src
- ┃ ┗ 📄 estacion_meteorologica.ino
+📦 estacion_meteorologica
+ ┣ 📂 _Proyecto_Meteorologia
+ ┃ ┗ 📄 _Proyecto_Meteorologia.ino
  ┣ 📂 imagenes
- ┃ ┣ 🖼️ BME680_-_Proyecto_Meteorologia.jpg
- ┃ ┣ 🖼️ GY-30_-_Proyecto_Meteorologia.jpg
- ┃ ┣ 🖼️ GY-30_-_Proyecto_Meteorologia_02.jpg
- ┃ ┣ 🖼️ MQ2_-_Proyecto_Meteorologia.jpg
- ┃ ┣ 🖼️ ProtoBoard_01_-_Frente_-_Proyecto_Meteorologia.jpg
- ┃ ┣ 🖼️ ProtoBoard_01_-_Atras_-_Proyecto_Meteorologia.jpg
- ┃ ┗ 🖼️ Servidor_Web_-_Proyecto_Meteorologia.jpg
+ ┃ ┣ 🖼️ BME680 - Proyecto Meteorologia.jpg
+ ┃ ┣ 🖼️ Datos Estudiante - Proyecto Meteorologia.jpg
+ ┃ ┣ 🖼️ GY-30 - Proyecto Meteorologia 02.jpg
+ ┃ ┣ 🖼️ GY-30 - Proyecto Meteorologia.jpg
+ ┃ ┣ 🖼️ MQ2 - Proyecto Meteorologia.jpg
+ ┃ ┣ 🖼️ ProtoBoard 01 - Atras - Proyecto Meteorologia.jpg
+ ┃ ┣ 🖼️ ProtoBoard 01 - Frente - Proyecto Meteorologia.jpg
+ ┃ ┗ 🖼️ Servidor Web - Proyecto Meteorologia.jpg
  ┣ 📄 README.md
  ┗ 📄 LICENSE
 ```
